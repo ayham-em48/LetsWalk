@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Calories</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="Sources\logo_PrU_icon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<style>
+		#modal {
+		    position: fixed;
+		    font-family: Arial, Helvetica, sans-serif;
+		    top: 0;
+		    left: 0;
+		    z-index: 99999;
+		    height: 100%;
+		    width: 100%;
+		}
+		.modalconent {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: #fff;
+		    width: 50%;
+		    height:70%;
+		    border-radius:8px;
+		    padding: 20px;
+		    animation: op1 1s linear ;
+		    box-shadow:1px 1px 8px #2C334B;
+		}
+		#button{
+			position:absolute;
+			top:80%;
+			left:40%;
+			color:white;
+			background-color:#2C334B;
+			border-radius:8px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px #2C334B;
+			display:block;
+			text-align:center;
+			padding:10px;
+			width:100px;
+			cursor:pointer;
+		}
+		#button:hover{
+			box-shadow:0px 2px 0px #E27860, -1px 4px 10px black;
+
+		}
+		.h1{
+			font-size:60px;
+			text-align:center;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		.p{
+			font-size:30px;
+			text-align:center;
+			margin-top:15%;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		@keyframes op1{
+			0% {opacity:0;}
+			50% {opacity:0.5;}
+			100% {opacity:2;}
+		}
+		html, body{
+			margin:0px;
+			width:100%;
+			height:175%;
+		}
+
+		body{
+			background-color:#E27860;
+			font-family: 'Open Sans Condensed', sans-serif;
+
+		}
+		.header{
+			margin-left:0.25%;
+			margin-right:0.25%;
+			background-color:white;
+			opacity: 0.5;
+			width:99.5%;
+			height:8%;
+			z-index:1;
+			position:fixed;
+			top:0px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			display:inline-block;
+			transition:opacity 1s;
+		}
+		.header:hover{
+			opacity:1;
+		}
+		.headercontent{
+			width:90%;
+			height:100%;
+			z-index:1;
+			position:absolute;
+			top:0px;
+			left:7%;
+			display:inline-block;
+		}
+		img{
+			width:6%;
+			height:90%;
+			postion:absolute;
+			left:0px;
+			top:0px;
+			z-index:0;
+			margin-left:1%;
+			margin-top:2px;
+		}
+		form{
+			margin-left:3%;
+			display:inline-block;
+			position:relative;
+			top:30%;
+		}
+		.search{
+			height:20px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:8px 0px 0px 8px;
+			box-shadow:-1px 1px 8px grey;
+			z-index:1;
+		}
+		.button{
+			height:22px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:0px 8px 8px 0px;
+			box-shadow:2px 1px 8px grey;
+			z-index:0;
+			cursor:pointer;
+		}
+		.link{
+			float:right;
+			height:100%;
+			width:15%;
+			color:black;
+			text-decoration:none;
+			background-color:transparent;
+			transition: background-color 1s;
+		}
+		p{
+			text-align:center;
+
+		}
+		.link:hover{
+			background-color:#e5e5e5;
+
+		}
+		.content{
+			position:absolute;
+			top:0;
+			background-color:#CCE9CB;
+			z-index:0;
+			height:305%;
+			width:100%;
+			box-shadow:0px 2px 10px #2C334B;
+		}
+		.Workouts{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:80px;
+			left:0;
+			animation: img3 1s;
+		}
+		.Workoutsh{
+			position:absolute;
+			top:5%;
+			left:57%;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Workoutsp{
+			position:absolute;
+			top:11%;
+			left:50%;
+			font-size:30px;
+			float:right;
+		}
+		.btn1{
+			position:absolute;
+			top:28%;
+			left:66%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.content a:hover{
+			box-shadow:0px 2px 0px #E27860, -2px 5px 8px grey;
+		}
+		.Meals{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:700px;
+			left:50%;
+		}
+		.Meals1{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:100px;
+			left:1%;
+		}
+		.Mealsh{
+			position:absolute;
+			top:37%;
+			left:10%;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Mealsp{
+			position:absolute;
+			top:45%;
+			left:1%;
+			font-size:30px;
+			float:left;
+			width: 600px;
+		}
+		.btn2{
+			position:absolute;
+			top:59%;
+			left:15%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.Calories{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:1350px;
+			left:0;
+		}
+		.Caloriesh{
+			position:absolute;
+			top:70%;
+			left:57%;
+			width:400px;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Caloriesp{
+			position:absolute;
+			top:79%;
+			left:50%;
+			width: 600px;
+			font-size:30px;
+			float:left;
+		}
+		.btn3{
+			position:absolute;
+			top:92%;
+			left:62%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+			.item1 {
+				position: relative;
+				top: 100px;
+				left: 150px;
+
+			}
+			.item2 {
+				position: relative;
+				top: 200px;
+				left: 150px;
+
+			}
+			.item3 {
+				position: relative;
+				top: 100px;
+
+
+			}
+			.item4 {
+				position: relative;
+				top: 220px;
+
+
+			}
+			.item5 {
+				position: relative;
+				top: 350px;
+
+
+			}
+		@media screen and (max-width:667px){
+			.link{
+				width:10%;
+			}
+			.img1 {
+				border: #000000 1px;
+
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="../Sources/Logo.png">
+			<div class="headercontent">
+			<form>
+				<input type="text" class="search"><input type="submit" class="button" value="Search">
+			</form>
+				<a class="link" href="FAQ's.html"><p>FAQ's</p></a>
+				<a class="link" href="Calories.html"><p>Calories</p></a>
+				<a class="link" href="Meals.html"><p>Meals</p></a>
+				<a class="link" href="workouts.html"><p>Workouts</p></a>
+				<a class="link" href="HomePage.html"><p>Home</p></a>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="item1">
+				<img class="img1" style="width: 420px; height: 300px;"src="../Sources/food1.jpg">
+				<div class="itemp1" style="text-align: center; margin-top: -300px; margin-left: -150px;">
+					<h1>Arugula</h1>
+					<h3>Calories: 4 per cup </h3>
+					<p style="width: 600px; text-align: left; padding-left:690px;">This delicate, peppery green is amazingly low in everything you don’t want, especially calories, fat, saturated fat, and cholesterol. It is, however, loaded with crunch and packed with fiber, vitamins A, C and K, and other nutrients, including potassium.
+
+Perfect in salads, soups, or anywhere you would use leafy greens, arugula may even boost your romantic life! Evidence suggests that the minerals and antioxidants packed into dark, leafy greens are essential for our sexual health because they help block absorption of toxins that dampen the libido
+</p>
+				</div>
+			</div>
+
+			<div class="item2">
+				<img class="img1" style="width: 420px; height: 300px;" src="../Sources/image (26).jpg">
+				<div class="itemp2" style="text-align: center; margin-top: -300px; margin-left: -150px;">
+					<h1>Asparagus</h1>
+					<h3>Calories: 27 per cup  </h3>
+					<p style="width: 600px; text-align: left; padding-left:690px;">Asparagus is traditionally known as a detoxifying food, because it contains high levels of an amino acid that acts as a diuretic, flushing excess fluid out of your system. It also helps speed the metabolism of alcohol and other toxins (it’s a surprising hangover remedy).
+
+Asparagus is also a powerhouse of vitamins and minerals, including vitamins A, C, E, and K, B6, folate, iron, copper, and even protein. We love the tender shoots in their most natural form, raw and tossed into salads, or steamed.
+
+</p>
+				</div>
+
+				<div class="item3">
+				<img class="img1" style="width: 420px; height: 300px;" src="../Sources/image (25).jpg">
+				<div class="itemp2" style="text-align: center; margin-top: -300px; margin-left: -150px;">
+					<h1>Broccoli</h1>
+					<h3>Calories: 31 per cup  </h3>
+					<p style="width: 600px; text-align: left; padding-left:690px;">Broccoli is amazingly low in calories, but it always makes our list of the top superfoods for a reason. Not only is it packed with fiber, vitamins, and minerals, it contains powerful antioxidants that may improve your odds of breast cancer survival and reduce the risk of colon cancer.
+
+The chemical in broccoli responsible for the protective effect is called sulforaphane, and yes, it gives broccoli its slightly bitter flavor.
+
+
+
+</p>
+				</div>
+			</div>
+			<div class="item4">
+				<img class="img1" style="width: 420px; height: 300px;" src="../Sources/image (21).jpg">
+				<div class="itemp2" style="text-align: center; margin-top: -300px; margin-left: -150px;">
+					<h1>Cabbage</h1>
+					<h3>Calories: 22 per cup  </h3>
+					<p style="width: 600px; text-align: left; padding-left:690px;">
+Crunchy, sweet, and affordable! How can a food that is so humble, with so few calories, be so incredibly good for you? Cabbage packs vitamins, minerals, fibers, and several phytonutrients thought to prevent cancer. Glucosinolate is a metabolic detoxifier and sulphoraphane is a powerful anti-carcinogenic.
+
+Purple cabbage also contains anthocyanins and other natural chemicals that boost cellular repair and block cancer growth. Eat up!
+
+
+
+</p>
+				</div>
+			</div>
+			<div class="item5">
+				<img class="img1" style="width: 420px; height: 300px;" src="../Sources/image (18).jpg">
+				<div class="itemp2" style="text-align: center; margin-top: -300px; margin-left: -150px;">
+					<h1>Coffee</h1>
+					<h3>Calories: Zero  </h3>
+					<p style="width: 600px; text-align: left; padding-left:690px;">
+Crunchy, sweet, and affordable! How can a food that is so humble, with so few calories, be so incredibly good for you? Cabbage packs vitamins, minerals, fibers, and several phytonutrients thought to prevent cancer. Glucosinolate is a metabolic detoxifier and sulphoraphane is a powerful anti-carcinogenic.
+
+Purple cabbage also contains anthocyanins and other natural chemicals that boost cellular repair and block cancer growth. Eat up!
+
+
+
+</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</body>
+
+</html>

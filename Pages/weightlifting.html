@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Weight Lifting</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="Sources\logo_PrU_icon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<style>
+		#modal {
+		    position: fixed;
+		    font-family: Arial, Helvetica, sans-serif;
+		    top: 0;
+		    left: 0;
+		    z-index: 99999;
+		    height: 100%;
+		    width: 100%;
+		}
+		.modalconent {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: #fff;
+		    width: 50%;
+		    height:70%;
+		    border-radius:8px;
+		    padding: 20px;
+		    animation: op1 1s linear ;
+		    box-shadow:1px 1px 8px #2C334B;
+		}
+		#button{
+			position:absolute;
+			top:80%;
+			left:40%;
+			color:white;
+			background-color:#2C334B;
+			border-radius:8px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px #2C334B;
+			display:block;
+			text-align:center;
+			padding:10px;
+			width:100px;
+			cursor:pointer;
+		}
+		#button:hover{
+			box-shadow:0px 2px 0px #E27860, -1px 4px 10px black;
+
+		}
+		.h1{
+			font-size:60px;
+			text-align:center;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		.p{
+			font-size:30px;
+			text-align:center;
+			margin-top:15%;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		@keyframes op1{
+			0% {opacity:0;}
+			50% {opacity:0.5;}
+			100% {opacity:2;}
+		}
+		html, body{
+			margin:0px;
+			width:100%;
+			height:175%;
+		}
+
+		body{
+			background-color:#E27860;
+			font-family: 'Open Sans Condensed', sans-serif;
+
+		}
+		.header{
+			margin-left:0.25%;
+			margin-right:0.25%;
+			background-color:white;
+			opacity: 0.5;
+			width:99.5%;
+			height:8%;
+			z-index:1;
+			position:fixed;
+			top:0px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			display:inline-block;
+			transition:opacity 1s;
+		}
+		.header:hover{
+			opacity:1;
+		}
+		.headercontent{
+			width:90%;
+			height:100%;
+			z-index:1;
+			position:absolute;
+			top:0px;
+			left:7%;
+			display:inline-block;
+		}
+		img{
+			width:6%;
+			height:90%;
+			postion:absolute;
+			left:0px;
+			top:0px;
+			z-index:0;
+			margin-left:1%;
+			margin-top:2px;
+		}
+		form{
+			margin-left:3%;
+			display:inline-block;
+			position:relative;
+			top:30%;
+		}
+		.search{
+			height:20px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:8px 0px 0px 8px;
+			box-shadow:-1px 1px 8px grey;
+			z-index:1;
+		}
+		.button{
+			height:22px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:0px 8px 8px 0px;
+			box-shadow:2px 1px 8px grey;
+			z-index:0;
+			cursor:pointer;
+		}
+		.link{
+			float:right;
+			height:100%;
+			width:15%;
+			color:black;
+			text-decoration:none;
+			background-color:transparent;
+			transition: background-color 1s;
+		}
+		p{
+			text-align:center;
+
+		}
+		.link:hover{
+			background-color:#e5e5e5;
+
+		}
+		.content{
+			position:absolute;
+			top:0;
+			background-color:#CCE9CB;
+			z-index:0;
+			height:295%;
+			width:100%;
+			box-shadow:0px 2px 10px #2C334B;
+		}
+		.weight{
+			width:400px;
+			height:300px;
+			position:relative;
+			top:50px;
+			left:2%;
+
+
+		}
+		.weighth{
+			position:relative;
+			top:2%;
+			left:4%;
+			font-size:60px;
+			font-weight:580;
+		}
+		.weightp{
+			position:absolute;
+			top:25%;
+			left:3%;
+			right:3%;
+			font-size:28px;
+			float:left;
+		}
+		.btn1{
+			position:absolute;
+			top:23%;
+			left:60%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.cardio a:hover{
+			box-shadow:0px 2px 0px #E27860, -2px 5px 8px grey;
+		}
+    .some {position:absolute;
+			top:35%;
+			left:4%;
+			font-size:40px;
+			font-weight:600; }
+	.some1 {position:absolute;
+						top:40%;
+						left:4%;
+						right:4%;
+						font-size:30px;
+			           font-weight:400; }
+
+
+
+
+			.gif    {width:400px;
+			         height:300px;
+			         position:relative;
+			          top:150px;
+			         left:2%;   }
+			.gif2    { width:400px;
+						height:300px;
+						position:absolute;
+						top:55%;
+			             left:2%;   }
+            .gif3    { width:400px;
+					 height:300px;
+					 position:absolute;
+						top:75%;
+						 left:2%;   }
+
+           .dum { font-size:30px;
+                       position:absolute;
+                       top:36%;
+                        left:35% }
+           .gob  { font-size:30px;
+                       position:absolute;
+                       top:1000px;
+                        left:35% }
+
+           .be { font-size:30px;
+		            position:absolute;
+		               top:75%;
+		               left:35% }
+
+
+           .how { font-size:30px;
+                       position:absolute;
+                       top:40%;
+                        left:35% }
+           .how2 { font-size:30px;
+                       position:absolute;
+                       top:59%;
+                        left:35% }
+           .how3 { font-size:30px;
+                       position:absolute;
+                       top:79%;
+                        left:35% }
+
+
+		@media screen and (max-width:667px){
+			.link{
+				width:10%;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="../Sources/Logo.png">
+			<div class="headercontent">
+			<form>
+				<input type="text" class="search"><input type="submit" class="button" value="Search">
+			</form>
+				<a class="link" href="FAQ's.html"><p>FAQ's</p></a>
+				<a class="link" href="Calories.html"><p>Calories</p></a>
+				<a class="link" href="Meals.html"><p>Meals</p></a>
+				<a class="link" href="workouts.html"><p>Workouts</p></a>
+				<a class="link" href="HomePage.html"><p>Home</p></a>
+			</div>
+		</div>
+
+		<div class="content">
+
+<img id="img1" class="weight" src="../Sources/weight.jpg">
+<img id="img2" class="weight" src="../Sources/weight3.jpeg">
+<img id="img3" class="weight" src="../Sources/weight2.jpg">
+
+
+			<h2 class="weighth">Weightlifting</h2>
+			<p class="weightp">The sport or activity of lifting barbells or other heavy weights. There are two standard lifts in modern weightlifting: the single-movement lift from floor to extended position (the snatch), and the two-movement lift from floor to shoulder position, and from shoulders to extended position (the clean and jerk).</p>
+
+
+                            <img class="gif"  src="../Sources/11.gif">
+                                  <p class="dum"><strong>Dumbbell Clean</strong></p>
+                                  <p class="how">Flip your wrists so they face forwards and bring the weights to your shoulders, slightly jumping as you do. Slowly straighten your legs to stand. Then lower the weights down to your thigh before moving into squat position and repeating. </p>
+                            <img class="gif2"  src="../Sources/22.gif">
+                                  <p class="gob"><strong> Goblet Squat</strong></p>
+                                   <p class="how2">Stand with feet set wider than shoulder-width and hold a dumbbell with both hands in front of your chest. Sit back into a squat, then drive back up and repeat.</p>
+	                        <img class="gif3"  src="../Sources/33.gif">
+                                    <p class="be"><strong>Bent Over Row</strong></p>
+                                    <p class="how3">Keep your core tight and your back straight as you row the weights up to your chest. Lower and repeat.</p>
+
+</div>
+</body>
+</html>

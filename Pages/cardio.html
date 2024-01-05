@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Cardio</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="Sources\logo_PrU_icon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<style>
+		#modal {
+		    position: fixed;
+		    font-family: Arial, Helvetica, sans-serif;
+		    top: 0;
+		    left: 0;
+		    z-index: 99999;
+		    height: 100%;
+		    width: 100%;
+		}
+		.modalconent {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: #fff;
+		    width: 50%;
+		    height:70%;
+		    border-radius:8px;
+		    padding: 20px;
+		    animation: op1 1s linear ;
+		    box-shadow:1px 1px 8px #2C334B;
+		}
+		#button{
+			position:absolute;
+			top:80%;
+			left:40%;
+			color:white;
+			background-color:#2C334B;
+			border-radius:8px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px #2C334B;
+			display:block;
+			text-align:center;
+			padding:10px;
+			width:100px;
+			cursor:pointer;
+		}
+		#button:hover{
+			box-shadow:0px 2px 0px #E27860, -1px 4px 10px black;
+
+		}
+		.h1{
+			font-size:60px;
+			text-align:center;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		.p{
+			font-size:30px;
+			text-align:center;
+			margin-top:15%;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		@keyframes op1{
+			0% {opacity:0;}
+			50% {opacity:0.5;}
+			100% {opacity:2;}
+		}
+		html, body{
+			margin:0px;
+			width:100%;
+			height:175%;
+		}
+
+		body{
+			background-color:#E27860;
+			font-family: 'Open Sans Condensed', sans-serif;
+
+		}
+		.header{
+			margin-left:0.25%;
+			margin-right:0.25%;
+			background-color:white;
+			opacity: 0.5;
+			width:99.5%;
+			height:8%;
+			z-index:1;
+			position:fixed;
+			top:0px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			display:inline-block;
+			transition:opacity 1s;
+		}
+		.header:hover{
+			opacity:1;
+		}
+		.headercontent{
+			width:90%;
+			height:100%;
+			z-index:1;
+			position:absolute;
+			top:0px;
+			left:7%;
+			display:inline-block;
+		}
+		img{
+			width:6%;
+			height:90%;
+			postion:absolute;
+			left:0px;
+			top:0px;
+			z-index:0;
+			margin-left:1%;
+			margin-top:2px;
+		}
+		form{
+			margin-left:3%;
+			display:inline-block;
+			position:relative;
+			top:30%;
+		}
+		.search{
+			height:20px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:8px 0px 0px 8px;
+			box-shadow:-1px 1px 8px grey;
+			z-index:1;
+		}
+		.button{
+			height:22px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:0px 8px 8px 0px;
+			box-shadow:2px 1px 8px grey;
+			z-index:0;
+			cursor:pointer;
+		}
+		.link{
+			float:right;
+			height:100%;
+			width:15%;
+			color:black;
+			text-decoration:none;
+			background-color:transparent;
+			transition: background-color 1s;
+		}
+		p{
+			text-align:center;
+
+		}
+		.link:hover{
+			background-color:#e5e5e5;
+
+		}
+		.content{
+			position:absolute;
+			top:0;
+			background-color:#CCE9CB;
+			z-index:0;
+			height:295%;
+			width:100%;
+			box-shadow:0px 2px 10px #2C334B;
+		}
+		.cardio{
+			width:400px;
+			height:300px;
+			position:relative;
+			top:50px;
+			left:2%;
+			animation: img2 3s;
+
+		}
+		.cardioh{
+			position:relative;
+			top:2%;
+			left:4%;
+			font-size:60px;
+			font-weight:580;
+		}
+		.cardiop{
+			position:absolute;
+			top:25%;
+			left:3%;
+			right:3%;
+			font-size:28px;
+			float:left;
+		}
+		.btn1{
+			position:absolute;
+			top:23%;
+			left:60%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.cardio a:hover{
+			box-shadow:0px 2px 0px #E27860, -2px 5px 8px grey;
+		}
+    .some {position:absolute;
+			top:35%;
+			left:4%;
+			font-size:40px;
+			font-weight:600; }
+	.some1 {position:absolute;
+						top:40%;
+						left:4%;
+						right:4%;
+						font-size:30px;
+			font-weight:400; }
+	#img4 {width:210px;
+			height:160px;
+			position:relative;
+			top:75%;
+			left:5%;}
+			#img4 {width:210px;
+						height:160px;
+						position:relative;
+						top:75%;
+			left:5%;}
+    #img5 {width:210px;
+						height:160px;
+						position:relative;
+						top:75%;
+			left:7%;}
+	#img6 {width:210px;
+						height:160px;
+						position:relative;
+						top:75%;
+			left:9%;}
+    #img7 {width:210px;
+			height:160px;
+			position:relative;
+			top:75%;
+			left:11%;}
+   #img8 {width:210px;
+						height:160px;
+						position:relative;
+						top:85%;
+			            left:-64%;}
+			     #img9 {width:210px;
+												height:160px;
+												position:relative;
+												top:76.1%;
+			                                    left:63%;}
+			   #img10 {width:210px;
+												height:160px;
+												position:relative;
+												top:76.2%;
+			                                    left:26.5%;}
+			   #img11 {width:210px;
+												height:160px;
+												position:relative;
+												top:76.2%;
+			                                    left:-10%;}
+		@media screen and (max-width:667px){
+			.link{
+				width:10%;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="../Sources/Logo.png">
+			<div class="headercontent">
+			<form>
+				<input type="text" class="search"><input type="submit" class="button" value="Search">
+			</form>
+				<a class="link" href="FAQ's.html"><p>FAQ's</p></a>
+				<a class="link" href="Calories.html"><p>Calories</p></a>
+				<a class="link" href="Meals.html"><p>Meals</p></a>
+				<a class="link" href="workouts.html"><p>Workouts</p></a>
+				<a class="link" href="HomePage.html"><p>Home</p></a>
+			</div>
+		</div>
+
+		<div class="content">
+
+<img id="img1" class="cardio" src="../Sources/cardioo.jpg">
+<img id="img2" class="cardio" src="../Sources/cardiooo.jpg">
+<img id="img3" class="cardio" src="../Sources/cardioooo.jpg">
+
+
+			<h2 class="cardioh">What is Cardio exercises?</h2>
+			<p class="cardiop"><strong>Cardio exercise</strong> is any exercise that raises your <strong>heart rate</strong>. Face it our bodies were made to move. And we all know that to keep our<strong> muscles</strong> in shape we need move them. This movement makes them stronger and stronger muscles make for a more efficient and healthy body. Your heart is a muscle. Therefore working it makes it stronger. A stronger cardio-vascular system means more capillaries delivering more oxygen to cells in your muscles. This enables your cells to burn more fat during both exercise and inactivity.</p>
+
+<h3 class="some">Some of the Best Cardio Workouts Are:</h2>
+<h4 class="some1"> <strong>Walking</strong> This is the easiest and safest way to start getting in your cardio.<br><br>
+                   <strong>Elliptical</strong> Minimal impact on the knees and hips but calorie burning is still high.When you increase the incline you will activate more muscles.<br><br>
+                    <strong>Runing</strong> This one is easy to understand.  Just remember if you train like a distance runner you will look like a distance runner.  If you train like a sprinter you will develop a sprinters body.Steading running burns calories but sprints take it to the next level.<br><br>
+                    <strong>Swimming</strong> This is a total body workout as long as you are not just floating,even treading water burns calories. Swimming laps would be best and change up the strokes you use so that you work all different kinds of muscles and the continuous pace works your heart and lungs.<br><br>
+                    <strong>Rowing</strong> Works both the upper and lower body and is low stress on joints and ligaments.<br><br>
+
+
+
+                                  </h4>
+
+		</div>
+
+
+
+<a href="cardiovideo1.html"><img id="img4" class="cardio" src="../Sources/video1.png" ></a>
+<a href="cardiovideo2.html"><img id="img5" class="cardio" src="../Sources/video2.png" ></a>
+<a href="cardiovideo3.html"><img id="img6" class="cardio" src="../Sources/video3.png" ></a>
+<a href="cardiovideo4.html"><img id="img7" class="cardio" src="../Sources/video4.png" ></a>
+<a href="cardiovideo5.html"><img id="img8" class="cardio" src="../Sources/video5.png" ></a>
+<a href="cardiovideo8.html"><img id="img9" class="cardio" src="../Sources/video6.png" ></a>
+<a href="cardiovideo7.html"><img id="img10" class="cardio" src="../Sources/video7.png" ></a>
+<a href="cardiovideo6.html"><img id="img11" class="cardio" src="../Sources/video8.png" ></a>
+
+
+	</body>
+
+</html>

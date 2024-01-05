@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Bad Food</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="Sources\logo_PrU_icon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<style>
+		#modal {
+		    position: fixed;
+		    font-family: Arial, Helvetica, sans-serif;
+		    top: 0;
+		    left: 0;
+		    z-index: 99999;
+		    height: 100%;
+		    width: 100%;
+		}
+		.modalconent {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: #fff;
+		    width: 50%;
+		    height:70%;
+		    border-radius:8px;
+		    padding: 20px;
+		    animation: op1 1s linear ;
+		    box-shadow:1px 1px 8px #2C334B;
+		}
+		#button{
+			position:absolute;
+			top:80%;
+			left:40%;
+			color:white;
+			background-color:#2C334B;
+			border-radius:8px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px #2C334B;
+			display:block;
+			text-align:center;
+			padding:10px;
+			width:100px;
+			cursor:pointer;
+		}
+		#button:hover{
+			box-shadow:0px 2px 0px #E27860, -1px 4px 10px black;
+
+		}
+		.h1{
+			font-size:60px;
+			text-align:center;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		.p{
+			font-size:30px;
+			text-align:center;
+			margin-top:15%;
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+		@keyframes op1{
+			0% {opacity:0;}
+			50% {opacity:0.5;}
+			100% {opacity:2;}
+		}
+		html, body{
+			margin:0px;
+			width:100%;
+			height:175%;
+		}
+
+		body{
+			background-color:#E27860;
+			font-family: 'Open Sans Condensed', sans-serif;
+
+		}
+		.header{
+			margin-left:0.25%;
+			margin-right:0.25%;
+			background-color:white;
+			opacity: 0.5;
+			width:99.5%;
+			height:8%;
+			z-index:1;
+			position:fixed;
+			top:0px;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			display:inline-block;
+			transition:opacity 1s;
+		}
+		.header:hover{
+			opacity:1;
+		}
+		.headercontent{
+			width:90%;
+			height:100%;
+			z-index:1;
+			position:absolute;
+			top:0px;
+			left:7%;
+			display:inline-block;
+		}
+		img{
+			width:6%;
+			height:90%;
+			postion:absolute;
+			left:0px;
+			top:0px;
+			z-index:0;
+			margin-left:1%;
+			margin-top:2px;
+		}
+		form{
+			margin-left:3%;
+			display:inline-block;
+			position:relative;
+			top:30%;
+		}
+		.search{
+			height:20px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:8px 0px 0px 8px;
+			box-shadow:-1px 1px 8px grey;
+			z-index:1;
+		}
+		.button{
+			height:22px;
+			border:none;
+			background-color:#f2f2f2;
+			border-radius:0px 8px 8px 0px;
+			box-shadow:2px 1px 8px grey;
+			z-index:0;
+			cursor:pointer;
+		}
+		.link{
+			float:right;
+			height:100%;
+			width:15%;
+			color:black;
+			text-decoration:none;
+			background-color:transparent;
+			transition: background-color 1s;
+		}
+		p{
+			text-align:center;
+
+		}
+		.link:hover{
+			background-color:#e5e5e5;
+
+		}
+		.content{
+			position:absolute;
+			top:0;
+			background-color:#CCE9CB;
+			z-index:0;
+			height:510%;
+			width:100%;
+			box-shadow:0px 2px 10px #2C334B;
+		}
+		.Workouts{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:80px;
+			left:0;
+			animation: img3 1s;
+		}
+		.Workoutsh{
+			position:absolute;
+			top:5%;
+			left:57%;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Workoutsp{
+			position:absolute;
+			top:11%;
+			left:50%;
+			font-size:30px;
+			float:right;
+		}
+		.btn1{
+			position:absolute;
+			top:28%;
+			left:66%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.content a:hover{
+			box-shadow:0px 2px 0px #E27860, -2px 5px 8px grey;
+		}
+		.Meals{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:700px;
+			left:50%;
+		}
+		.Meals1{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:100px;
+			left:1%;
+		}
+		.Mealsh{
+			position:absolute;
+			top:37%;
+			left:10%;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Mealsp{
+			position:absolute;
+			top:45%;
+			left:1%;
+			font-size:30px;
+			float:left;
+			width: 600px;
+		}
+		.btn2{
+			position:absolute;
+			top:59%;
+			left:15%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+		.Calories{
+			width:600px;
+			height:500px;
+			position:absolute;
+			top:1350px;
+			left:0;
+		}
+		.Caloriesh{
+			position:absolute;
+			top:70%;
+			left:57%;
+			width:400px;
+			font-size:50px;
+			font-weight:600;
+		}
+		.Caloriesp{
+			position:absolute;
+			top:79%;
+			left:50%;
+			width: 600px;
+			font-size:30px;
+			float:left;
+		}
+		.btn3{
+			position:absolute;
+			top:92%;
+			left:62%;
+			color: white;
+			padding: 10px 90px;
+			background-color: #2C334B;
+			box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+			border-radius:8px;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width:667px){
+			.link{
+				width:10%;
+			}
+
+			.content1 {
+				margin-left: 25%;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="../Sources/Logo.png">
+			<div class="headercontent">
+			<form>
+				<input type="text" class="search"><input type="submit" class="button" value="Search">
+			</form>
+				<a class="link" href="FAQ's.html"><p>FAQ's</p></a>
+				<a class="link" href="Calories.html"><p>Calories</p></a>
+				<a class="link" href="Meals.html"><p>Meals</p></a>
+				<a class="link" href="workouts.html"><p>Workouts</p></a>
+				<a class="link" href="HomePage.html"><p>Home</p></a>
+			</div>
+		</div>
+
+		<div class="content">
+
+				<img src="../Sources/rsz_depositphotos_25595207_m.jpg" style="width: 48%; height: 400px; margin-left: 25%;
+				margin-top:7%; ">
+				<div class="content1" style="margin-left: 28%;">
+					<h1>7 Foods That Are Bad For Your Health (Avoid Them!)</h1>
+					<h3 style="width: 60%;">
+There is a lot of confusion out there about which foods are healthy, and which are not Here is a list of 7 foods that are generally very unhealthy.
+If you want to lose weight and avoid chronic disease, then you shouldn't eat much of these foods.
+In many cases, the best choice is to avoid them completely.
+In this article, healthy alternatives are mentioned whenever possible.
+</h3>
+			<h2>1.Sugary Drinks</h2>
+			<h3 style="width: 60%">Added sugar is the single worst ingredient in the modern diet.
+However, some sources of sugar are worse than others, and sugary drinks are the absolute worst.<br>
+When people drink sugar calories, the brain doesn't "register" them as food.
+For this reason, people don't automatically compensate by eating less of other foods instead, and end up drastically increasing their total calorie intake (1, 2, 3).<br>
+Sugar, when consumed in large amounts, can drive insulin resistance in the body and is strongly linked to non-alcoholic fatty liver disease. It is also associated with various serious diseases, including type 2 diabetes and heart disease (4, 5, 6).<br>
+Sugary drinks are also THE most fattening aspect of the modern diet, and drinking them in large amounts can drive fat gain and obesity (7, 8, 9).<br>
+<br>
+Alternatives: Drink water, soda water, coffee or tea instead. Adding a slice of lemon to water or soda water can add some taste if you don't like it plain
+</h3>
+			<br>
+			<h2>2.Most Pizzas</h2>
+			<h3 style="width: 60%;">Pizza is one of the world's most popular junk foods.
+This is not surprising, given that it tastes awesome and is incredibly convenient to eat.<br>
+The problem is that most commercially prepared pizzas are made with seriously unhealthy ingredients.
+The dough is made from highly refined wheat flour, and the meats on them are usually processed. Pizza is also extremely high in calories.<br>
+<br>
+Alternatives: Some pizza places use healthier ingredients. Homemade pizzas can also be very healthy, as long as you choose wholesome ingredients.
+</h3>
+		<br>
+			<h2>3.White Bread</h2>
+			<h3 style="width: 60%;">Bread is generally made from wheat, which contains the protein gluten.
+For this reason, all wheat-based breads are a bad idea for people who have celiac disease or gluten sensitivity.
+<br>
+However, most commercial breads are unhealthy, even for people who do tolerate gluten.
+This is because the great majority of them are made from refined wheat, which is low in essential nutrients (empty calories) and leads to rapid spikes in blood sugar (10).
+<br>
+<br>
+Alternatives: For people who can tolerate gluten, ezekiel bread is an excellent choice. Whole grain bread is also definitely better (or "less bad") than white bread.
+
+</h3>
+	<br>
+			<h2>4.Most Fruit Juices</h2>
+				<h3 style="width: 60%;">Fruit juice is often assumed to be healthy, but this is a mistake.
+Many fruit juices are actually little more than fruit-flavored sugar water.<br>
+It is true that the juice contains some antioxidants and vitamin C, but this must be weighed against the large amount of liquid sugar.
+In fact, fruit juice contains just as much sugar as a sugary drink like Coke or Pepsi, and sometimes even more (11).<br>
+<br>
+Alternatives: There are some fruit juices that have been shown to have health benefits despite the sugar content, such as pomegranate juice and blueberry juice.
+</h3>
+			<br>
+			<h2>5.Industrial Vegetable Oils</h2>
+			<h3 style="width: 60%">
+				In the last 100 years or so, people have increased their consumption of added fats.
+However, this is entirely explained by a drastic increase in the consumption of refined vegetable oils, such as soybean oil, corn oil, cottonseed oil and canola oil.<br>
+These oils are very high in omega-6 fatty acids, which humans never consumed in such large amounts before.
+There are many serious concerns with these oils. They are highly sensitive to oxidation and cause increased oxidative stress in the body. They have also been linked to increased risk of cancer (12, 13, 14, 15, 16, 17, 18, 19).<br>
+<br>
+Alternatives: Use healthier fats like coconut oil, butter, extra virgin olive oil or avocado oil instead.
+
+			</h3>
+			<h2>6.Margarine</h2>
+			<h3 style="width: 60%">
+				Margarine used to be considered a healthy alternative to butter.
+Fortunately, most people have now realized that this is far from being true.<br>
+Margarine is a highly processed pseudo-food that has been engineered to look and taste like butter.
+It is loaded with artificial ingredients, and is usually made with industrial vegetable oils that have been hydrogenated to make them more solid. This increases their trans fat content significantly.<br>
+Keep in mind that manufacturers are allowed to label their products with "no trans fat" as long as it contains less than 0.5 grams per serving, which is still a significant amount.<br>
+<br>
+Alternatives: Use real butter instead, preferably from grass-fed cows.
+
+			</h3>
+			<br>
+			<h2>7.Pastries, Cookies and Cakes</h2>
+			<h3 style="width: 60%">
+				Most pastries, cookies and cakes are extremely unhealthy.
+They are generally made with refined sugar, refined wheat flour and added fats, which are often disturbingly unhealthy fats like shortening (high in trans fats).<br>
+These tasty treats are literally some of the worst things that you can put into your body.<br> Almost no essential nutrients, but tons of calories and unhealthy ingredients.
+
+
+			</h3>
+			<br>
+			<br>
+			<br>
+			<br>
+				</div>
+		</div>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,259 @@
+#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalconent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 50%;
+    height:70%;
+    border-radius:8px;
+    padding: 20px;
+    animation: op1 1s linear ;
+    box-shadow:1px 1px 8px #2C334B;
+}
+#button{
+	position:absolute;
+	top:80%;
+	left:40%;
+	color:white;
+	background-color:#2C334B;
+	border-radius:8px;
+	box-shadow:0px 2px 0px #E27860, -1px 4px 8px #2C334B;
+	display:block;
+	text-align:center;
+	padding:10px;
+	width:100px;
+	cursor:pointer;
+}
+#button:hover{
+	box-shadow:0px 2px 0px #E27860, -1px 4px 10px black;
+
+}
+.h1{
+	font-size:60px;
+	text-align:center;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.p{
+	font-size:30px;
+	text-align:center;
+	margin-top:15%;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+@keyframes op1{
+	0% {opacity:0;}
+	50% {opacity:0.5;}
+	100% {opacity:2;}
+}
+html, body{
+	margin:0px;
+	width:100%;
+	height:175%;
+}
+
+body{
+	background-color:#E27860;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.header{
+	margin-left:0.25%;
+	margin-right:0.25%;
+	background-color:white;
+	opacity: 0.5;
+	width:99.5%;
+	height:8%;
+	z-index:1;
+	position:fixed;
+	top:0px;
+	box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+	display:inline-block;
+	transition:opacity 1s;
+}
+.header:hover{
+	opacity:1;
+}
+.headercontent{
+	width:90%;
+	height:100%;
+	z-index:1;
+	position:absolute;
+	top:0px;
+	left:7%;
+	display:inline-block;
+}
+img{
+	width:6%;
+	height:90%;
+	postion:absolute;
+	left:0px;
+	top:0px;
+	z-index:0;
+	margin-left:1%;
+	margin-top:2px;
+}
+form{
+	margin-left:3%;
+	display:inline-block;
+	position:relative;
+	top:30%;
+}
+.search{
+	height:20px;
+	border:none;
+	background-color:#f2f2f2;
+	border-radius:8px 0px 0px 8px;
+	box-shadow:-1px 1px 8px grey;
+	z-index:1;
+}
+.button{
+	height:22px;
+	border:none;
+	background-color:#f2f2f2;
+	border-radius:0px 8px 8px 0px;
+	box-shadow:2px 1px 8px grey;
+	z-index:0;
+	cursor:pointer;
+}
+.link{
+	float:right;
+	height:100%;
+	width:15%;
+	color:black;
+	text-decoration:none;
+	background-color:transparent;
+	transition: background-color 1s;
+}
+p{
+	text-align:center;
+
+}
+.link:hover{
+	background-color:#e5e5e5;
+
+}
+.content{
+	position:absolute;
+	top:0;
+	background-color:#CCE9CB;
+	z-index:0;
+	height:295%;
+	width:100%;
+	box-shadow:0px 2px 10px #2C334B;
+}
+.cardio{
+	width:600px;
+	height:500px;
+	position:absolute;
+	top:80px;
+	left:20px;
+
+
+}
+.cardioh{
+	position:absolute;
+	top:7%;
+	left:62%;
+	font-size:70px;
+	font-weight:600;
+}
+.cardiop{
+	position:absolute;
+	top:15%;
+	left:57%;
+	font-size:30px;
+	float:left;
+}
+.btn1{
+	position:absolute;
+	top:23%;
+	left:60%;
+	color: white;
+	padding: 10px 90px;
+	background-color: #2C334B;
+	box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+	border-radius:8px;
+	text-decoration: none;
+}
+.content a:hover{
+	box-shadow:0px 2px 0px #E27860, -2px 5px 8px grey;
+}
+.core{
+	width:600px;
+	height:500px;
+	position:absolute;
+	top:700px;
+	left:50%;
+}
+.coreh{
+	position:absolute;
+	top:39%;
+	left:19%;
+	font-size:70px;
+	font-weight:600;
+}
+.corep{
+	position:absolute;
+	top:47%;
+	left:10%;
+	font-size:30px;
+	float:left;
+}
+.btn2{
+	position:absolute;
+	top:57%;
+	left:15%;
+	color: white;
+	padding: 10px 90px;
+	background-color: #2C334B;
+	box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+	border-radius:8px;
+	text-decoration: none;
+}
+.weightlifting{
+	width:600px;
+	height:500px;
+	position:absolute;
+	top:1350px;
+	left:20px;
+}
+.weightliftingh{
+	position:absolute;
+	top:75%;
+	left:58%;
+	font-size:70px;
+	font-weight:600;
+}
+.weightliftingp{
+	position:absolute;
+	top:84%;
+	left:57%;
+	font-size:30px;
+	float:left;
+}
+.btn3{
+	position:absolute;
+	top:93%;
+	left:62%;
+	color: white;
+	padding: 10px 90px;
+	background-color: #2C334B;
+	box-shadow:0px 2px 0px #E27860, -1px 4px 8px grey;
+	border-radius:8px;
+	text-decoration: none;
+}
+
+@media screen and (max-width:667px){
+	.link{
+		width:10%;
+	}
+

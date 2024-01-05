@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Sign up</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../StyleSheets/SignUpPage.css">
+		<link rel="shortcut icon" type="image/x-icon" href="Sources\logo_PrU_icon.ico">
+
+		<script>
+			function storage(){
+				localStorage.setItem("fname",document.getElementById("name").value);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id = "main"> <img src="../Sources/Logo.png" alt="Logo" > </div>
+		<div id = "form">
+		<form id = "form1" method="get" action="HomePage.html" >
+
+			<label>Name<br>
+				<input type = "text" name="fname" id="name" placeholder = "First Name" class = "input" style = "width:140px;" required >
+				<input type = "text" placeholder = "Last Name" class = "input" style = "width:140px;" required >
+			</label><br>
+
+			<div id = "inputs-width">
+			<label>Email<br>
+				<input type = "email" placeholder = "example@gmail.com" class = "input" >
+			</label><br>
+
+			<label>Password<br>
+				<input type = "password" class = "input" >
+			</label><br>
+
+			<label>Comfirm your Password<br>
+				<input type = "password" class = "input" >
+			</label><br>
+
+			<label>Birthday<br>
+				<input type = "date" class = "input" required>
+			</label><br>
+
+			<label>Gender </label> <br>
+
+			<input type= "radio" name="gender" style = "width:30px;">Male
+			<input type= "radio" name="gender" style = "width:30px;">Female<br>
+
+			</div>
+			<input type = "submit" class = "button" onclick="storage()" value = "Sign up">
+			<a href="../LetsWalk.html"><input type = "button" href="LetsWalk.html" class = "button" value = "Cancle"></a>
+
+		</form>
+		</div>
+		<h1>Create your<br> Account<h1>
+	</body>
+
+</html>
